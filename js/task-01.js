@@ -1,34 +1,66 @@
+// // Порахував і вивев в консоль кількість категорій
 // function fnA() { 
-//     return document.querySelectorAll(".categories")
-// }
-
-// console.log(fnA())
-
-
-
-const atTheOldToad = {
-    potions: [
-        { name: "Speed potion", price: 460 },
-        { name: "Dragon breath", price: 780 },
-        { name: "Stone skin", price: 520 },
-    ],
-    // Change code below this line
-    getPotions() {
-        return this.potions;
-    },
-  
-    addPotion(newPotion) {
-        const idx = this.potions.findIndex(potion => potion.name === newPotion.name)
-        
-        if (!~idx) {
-            this.potions.push(newPotion)
-        }
-      
-        `Error! Potion ${newPotion.name} is already in your inventory!`
+//     const allCategories = [...categories.children].length;
+// return `Number of categories : ${allCategories}`;
     
-  
-    }
-}
+// }
+// console.dir(fnA());
+// // ========================================
+// кількість елементів в категорії
 
-const a = atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
-console.dir(atTheOldToad);
+// function fnB() { 
+//   // // отримать ul item
+// const allElement = [...document.querySelectorAll('.item')]
+// // перебрав ul та вивев окремо єлементи масиву
+//     for (const el of allElement) { 
+//     console.log(el.children[0].textContent);
+//     console.log(el.children[1].children.length); 
+// }  
+// }
+// console.dir(fnB());
+
+// завдання 2
+
+
+
+const ingredients = [
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
+];
+
+const itemRef = document.createElement("ul");
+  itemRef.id = "#ingredients"
+
+const coookListEl = ingredients.map(ingredient => { 
+  
+  const coookList = document.createElement('li')
+  coookList.classList.add("item")
+  coookList.textContent = ingredient 
+  
+  return coookList
+})
+
+itemRef.append(...coookListEl)
+
+const add = document.querySelector("body")
+
+
+add.insertBefore(itemRef, add.children[2])
+
+console.log(add);
+
+
+
+// завдання 3
+
+
+
+const gallaryItem = document.createElement("ul")
+gallaryItem.classList.add("gallery");
+
+console.log(gallaryItem);
+

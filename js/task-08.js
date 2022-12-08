@@ -54,7 +54,8 @@ function onFormSubmit(evn) {
     alert("заповніть форму")
     return
   }
-console.log(dataForm);
+  console.log(dataForm);
+  
   // const formDataPatern = new FormData(evn.currentTarget)
   // formDataPatern.forEach((value, name) => {
   //   console.log({value,name});

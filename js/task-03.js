@@ -64,6 +64,6 @@ addImages.insertBefore(gallaryListRef, addImages.children[4])
 
 console.log(addImages);
  
-console.log(gallaryListRef);
-console.log(gallaryItemRef);
+// console.log(gallaryListRef);
+// console.log(gallaryItemRef);
 

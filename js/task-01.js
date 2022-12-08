@@ -1,36 +1,36 @@
-// // Порахував і вивев в консоль кількість категорій
-// function fnA() { 
-//     const allCategories = [...categories.children].length;
-// return `Number of categories : ${allCategories}`;
+// Порахував і вивев в консоль кількість категорій
+function fnA() { 
+    const allCategories = [...categories.children].length;
+return `Number of categories : ${allCategories}`;
     
-// }
-// console.dir(fnA());
-// // ========================================
+}
+console.dir(fnA());
+// ========================================
 // кількість елементів в категорії
 
-// function fnB() { 
-//   // // отримать ul item
-// const allElement = [...document.querySelectorAll('.item')]
-// // перебрав ul та вивев окремо єлементи масиву
-//     for (const el of allElement) { 
-//     console.log(el.children[0].textContent);
-//     console.log(el.children[1].children.length); 
-// }  
-// }
-// console.dir(fnB());
+function fnB() { 
+  // // отримать ul item
+const allElement = [...document.querySelectorAll('.item')]
+// перебрав ul та вивев окремо єлементи масиву
+    for (const el of allElement) { 
+    console.log(el.children[0].textContent);
+    console.log(el.children[1].children.length); 
+}  
+}
+console.dir(fnB());
 
 // завдання 2
 
 
 
-const ingredients = [
-  "Potatoes",
-  "Mushrooms",
-  "Garlic",
-  "Tomatos",
-  "Herbs",
-  "Condiments",
-];
+// const ingredients = [
+//   "Potatoes",
+//   "Mushrooms",
+//   "Garlic",
+//   "Tomatos",
+//   "Herbs",
+//   "Condiments",
+// ];
 
 // const itemRef = document.createElement("ul");
 //   itemRef.id = "#ingredients"
@@ -247,63 +247,63 @@ const ingredients = [
   
 // }
 
+// // завдання 8
+
+// {/* <form class="login-form">
+//   <label>
+//     Email
+//     <input type="email" name="email" />
+//   </label>
+//   <label>
+//     Password
+//     <input type="password" name="password" />
+//   </label>
+//   <button type="submit">Login</button>
+// </form> */}
+
+// const task8 = document.body;
+// const markupForm = `<form class="login-form">
+//   <label>
+//     Email
+//     <input type="email" name="email" />
+//   </label>
+//   <label>
+//     Password
+//     <input type="password" name="password" />
+//   </label>
+//   <button type="submit">Login</button>
+// </form>`
+
+// task8.insertAdjacentHTML('afterbegin', markupForm);
+// const formEl = document.querySelector(".login-form")
+
+// formEl.addEventListener('submit', onFormSubmit)
+
+// // function onImput() { 
+// //   if()
+// // }
 
 
-{/* <form class="login-form">
-  <label>
-    Email
-    <input type="email" name="email" />
-  </label>
-  <label>
-    Password
-    <input type="password" name="password" />
-  </label>
-  <button type="submit">Login</button>
-</form> */}
 
-const task8 = document.body;
-const markupForm = `<form class="login-form">
-  <label>
-    Email
-    <input type="email" name="email" />
-  </label>
-  <label>
-    Password
-    <input type="password" name="password" />
-  </label>
-  <button type="submit">Login</button>
-</form>`
+// /**збирає данні форми
+//  * 
+//  * @param {*evn} evn 
+//  */
 
-task8.insertAdjacentHTML('afterbegin', markupForm);
-const formEl = document.querySelector(".login-form")
-
-formEl.addEventListener('submit', onFormSubmit)
-
-// function onImput() { 
-//   if()
-// }
-
-
-
-/**збирає данні форми
- * 
- * @param {*evn} evn 
- */
-
-function onFormSubmit(evn) {
-  evn.preventDefault();
+// function onFormSubmit(evn) {
+//   evn.preventDefault();
   
-  const email = evn.currentTarget.elements.email.value
-  const password = evn.currentTarget.elements.password.value
-  const dataForm = { email, password }
-  console.log(dataForm);
+//   const email = evn.currentTarget.elements.email.value
+//   const password = evn.currentTarget.elements.password.value
+//   const dataForm = { email, password }
+//   console.log(dataForm);
   
 
-  // const formDataPatern = new FormData(evn.currentTarget)
-  // formDataPatern.forEach((value, name) => {
-  //   console.log({value,name});
-// }
-  }
+//   // const formDataPatern = new FormData(evn.currentTarget)
+//   // formDataPatern.forEach((value, name) => {
+//   //   console.log({value,name});
+// // }
+//   }
 
 
 

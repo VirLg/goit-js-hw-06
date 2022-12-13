@@ -13,6 +13,8 @@ const inputRef = document.querySelector('#name-input')
 inputRef.addEventListener('input', onInput)
 const outputRef = document.querySelector('#name-output')
 function onInput(evn) { 
-outputRef.textContent = evn.currentTarget.value
+    (!inputRef.value) ? outputRef.textContent = "Anonymous": outputRef.textContent = evn.currentTarget.value
+     
+    }
+    
 
-}

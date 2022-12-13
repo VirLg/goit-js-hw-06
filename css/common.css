@@ -23,7 +23,7 @@ button {
   cursor: pointer;
 }
 
-.gallery {
+.gallary {
   display: flexbox;
   justify-content: center;
   align-items: center;
@@ -36,4 +36,16 @@ button {
 .gallary__item-pic {
   outline: 2px solid blueviolet;
   width: 500px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }

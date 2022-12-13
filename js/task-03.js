@@ -16,54 +16,21 @@ const images = [
 
 // завдання 3
 
-// const images = [
-//   {
-//     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
-//     alt: "White and Black Long Fur Cat",
-//   },
-//   {
-//     url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
-//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-//   },
-//   {
-//     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
-//     alt: "Group of Horses Running",
-//   },
-// ];
+
+const task3 = document.body
 
 
 
-const gallaryListRef = document.createElement("ul")
-gallaryListRef.classList.add("gallery");
+const markupGallary = images.map(({ url, alt}) => 
+`
+<ul class="gallary"> 
+<li>
+<img class="gallary__item-pic" src="${url}" alt="${alt}" width="300px">
+</li>
+</ul>
+`).join('')
 
 
 
-const creataGallaryRef = images.map(image => {
- const gallaryItemRef = document.createElement("li")
-  gallaryItemRef.classList.add("gallary__item")
-
-  const gallaryImgRef = document.createElement("img")
-  gallaryImgRef.classList.add("gallary__item-pic")
-  gallaryImgRef.src = image.url
-  gallaryImgRef.alt = image.alt
-  gallaryItemRef.append(gallaryImgRef)
-  
-  return gallaryItemRef
- 
-
-
-})
-gallaryListRef.append(...creataGallaryRef)
-
-const addImages = document.querySelector("body")
-
-
-addImages.insertBefore(gallaryListRef, addImages.children[4])
-
-
-
-console.log(addImages);
- 
-// console.log(gallaryListRef);
-// console.log(gallaryItemRef);
+task3.insertAdjacentHTML('beforeend', markupGallary)
 

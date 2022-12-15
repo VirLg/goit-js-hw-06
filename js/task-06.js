@@ -14,26 +14,27 @@ const validationLength = inputRef.dataset.length
 inputRef.addEventListener('blur', onImputBlur)
 
 
-let a = 6;
+let a = inputRef.dataset.length;
+
 
 
 function onImputBlur(evn) {
-  if ((evn.currentTarget.value).length < `${validationLength}`) {
+  if ((evn.currentTarget.value).length <= `${validationLength}`) {
     
-    a = addClass((evn.currentTarget.value).length)
+    addClass((evn.currentTarget.value).length)
     
   } else { 
    
-    a = addClass((evn.currentTarget.value).length)
+    addClass((evn.currentTarget.value).length)
   
   }
 
 }
 
-function addClass() {
+function addClass(b) {
   
  
-  if (!a) {
+  if (b>=a) {
       inputRef.classList.remove('invalid')
     inputRef.classList.add('valid')
  
